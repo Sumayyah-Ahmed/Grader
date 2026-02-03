@@ -7,20 +7,16 @@ Grading Book is being built to help educators track daily tasks, assignments, an
 Developed in FlutterFlow and powered by Firebase, the app will support real‑time updates, secure data storage, and smooth cross‑platform performance.
 
 ## Features
-### Student Progress Tracking  
-Record scores, tasks, and learning milestones with ease.
+Student Progress Tracking  
 
-### Daily Streak System  
-Encourage consistency and motivate students with visual streaks.
+Daily Streak System  
 
-### Subject & Topic Modules  
-Organize learning into categories like Basic Operations or Geometry.
+Subject & Topic Modules 
 
-### Clean, Modern UI  
-Simple layouts and thoughtful design for quick navigation and minimal friction.
+Clean, Modern UI  
 
-### Firebase Integration  
-Authentication, Firestore database, and secure cloud storage.
+Firebase Integration  
+
 
 ## Roadmap
 Add teacher dashboard
