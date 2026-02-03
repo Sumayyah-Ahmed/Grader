@@ -1,12 +1,12 @@
-#📘 Grading Book
+# Grading Book📘 
 A simple, intuitive grading and progress‑tracking app designed for teachers, tutors, and parents who want a clean way to record student performance and monitor improvement over time.
 
-##✨ Overview
+## Overview
 Grading Book helps educators track daily tasks, assignments, and learning progress with a friendly interface. The app focuses on clarity, ease of use, and visual motivation — making it ideal for classrooms, homeschooling, or tutoring sessions.
 
 Built with FlutterFlow and powered by Firebase, it supports real‑time updates, secure data storage, and smooth cross‑platform performance.
 
-##🚀 Features
+## Features
 Student Progress Tracking  
 Record scores, tasks, and learning milestones with ease.
 
@@ -22,7 +22,7 @@ Simple layouts designed for quick navigation and minimal friction.
 Firebase Integration  
 Authentication, Firestore database, and secure cloud storage.
 
-##📈 Roadmap
+## Roadmap
 Add teacher dashboard
 
 Add student profiles
