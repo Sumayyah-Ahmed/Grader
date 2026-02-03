@@ -32,6 +32,7 @@ class _StartWidgetState extends State<StartWidget> {
       await showModalBottomSheet(
         isScrollControlled: true,
         backgroundColor: Colors.transparent,
+
         enableDrag: false,
         useSafeArea: true,
         context: context,
@@ -70,29 +71,36 @@ class _StartWidgetState extends State<StartWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
+
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+
         body: Container(
           width: double.infinity,
           height: double.infinity,
+
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: Image.asset(
-                'assets/images/start.png',
-              ).image,
+
+              image: Image.asset('assets/images/start.png').image,
             ),
           ),
+
           child: SafeArea(
             child: Container(
               width: double.infinity,
               height: double.infinity,
+
               decoration: BoxDecoration(),
+
               child: Column(
                 mainAxisSize: MainAxisSize.max,
+
                 children: [
                   Container(
                     height: MediaQuery.sizeOf(context).height * 0.132,
+
                     decoration: BoxDecoration(),
                   ),
                   Align(
@@ -109,6 +117,7 @@ class _StartWidgetState extends State<StartWidget> {
                   ),
                   Container(
                     height: MediaQuery.sizeOf(context).height * 0.09,
+
                     decoration: BoxDecoration(),
                   ),
                   Align(
@@ -125,6 +134,7 @@ class _StartWidgetState extends State<StartWidget> {
                   ),
                   Container(
                     height: MediaQuery.sizeOf(context).height * 0.1,
+
                     decoration: BoxDecoration(),
                   ),
                   InkWell(
@@ -135,48 +145,55 @@ class _StartWidgetState extends State<StartWidget> {
                     onTap: () async {
                       context.goNamed(
                         SignUpWidget.routeName,
+
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          '__transition_info__': TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
+
                             duration: Duration(milliseconds: 400),
                           ),
                         },
                       );
                     },
+
                     child: Container(
                       width: 180.0,
                       height: 64.0,
+
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primary,
+
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 0.0,
                             color: FlutterFlowTheme.of(context).primaryText,
-                            offset: Offset(
-                              4.0,
-                              4.0,
-                            ),
+                            offset: Offset(4.0, 4.0),
                             spreadRadius: 0.0,
-                          )
+                          ),
                         ],
+
                         borderRadius: BorderRadius.circular(8.0),
+
                         border: Border.all(
                           color: FlutterFlowTheme.of(context).primaryText,
                           width: 1.0,
                         ),
                       ),
+
                       child: Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           'Let’s go',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Sukhumvit Set',
-                                    fontSize: 28.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+
+                          style: FlutterFlowTheme.of(context).bodyMedium
+                              .override(
+                                fontFamily: 'Sukhumvit Set',
+
+                                fontSize: 28.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                         ),
                       ),
                     ),

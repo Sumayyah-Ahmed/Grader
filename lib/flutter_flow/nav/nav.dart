@@ -30,11 +30,31 @@ class AppStateNotifier extends ChangeNotifier {
 }
 
 GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
-      initialLocation: '/',
-      debugLogDiagnostics: true,
-      refreshListenable: appStateNotifier,
-      navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => appStateNotifier.showSplashImage
+  initialLocation: '/',
+  debugLogDiagnostics: true,
+  refreshListenable: appStateNotifier,
+  navigatorKey: appNavigatorKey,
+  errorBuilder: (context, state) => appStateNotifier.showSplashImage
+      ? Builder(
+          builder: (context) => Container(
+            color: FlutterFlowTheme.of(context).primary,
+            child: Center(
+              child: Image.asset(
+                'assets/images/image_9081.png',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.none,
+              ),
+            ),
+          ),
+        )
+      : StartWidget(),
+
+  routes: [
+    FFRoute(
+      name: '_initialize',
+      path: '/',
+      builder: (context, _) => appStateNotifier.showSplashImage
           ? Builder(
               builder: (context) => Container(
                 color: FlutterFlowTheme.of(context).primary,
@@ -49,85 +69,74 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             )
           : StartWidget(),
-      routes: [
-        FFRoute(
-          name: '_initialize',
-          path: '/',
-          builder: (context, _) => appStateNotifier.showSplashImage
-              ? Builder(
-                  builder: (context) => Container(
-                    color: FlutterFlowTheme.of(context).primary,
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/image_9081.png',
-                        width: double.infinity,
-                        height: double.infinity,
-                        fit: BoxFit.none,
-                      ),
-                    ),
-                  ),
-                )
-              : StartWidget(),
-        ),
-        FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
-          builder: (context, params) => HomePageWidget(),
-        ),
-        FFRoute(
-          name: StartWidget.routeName,
-          path: StartWidget.routePath,
-          builder: (context, params) => StartWidget(),
-        ),
-        FFRoute(
-          name: SignUpWidget.routeName,
-          path: SignUpWidget.routePath,
-          builder: (context, params) => SignUpWidget(),
-        ),
-        FFRoute(
-          name: LogInWidget.routeName,
-          path: LogInWidget.routePath,
-          builder: (context, params) => LogInWidget(),
-        ),
-        FFRoute(
-          name: QuestionsWidget.routeName,
-          path: QuestionsWidget.routePath,
-          builder: (context, params) => QuestionsWidget(),
-        ),
-        FFRoute(
-          name: Questions2Widget.routeName,
-          path: Questions2Widget.routePath,
-          builder: (context, params) => Questions2Widget(),
-        ),
-        FFRoute(
-          name: Questions3Widget.routeName,
-          path: Questions3Widget.routePath,
-          builder: (context, params) => Questions3Widget(),
-        ),
-        FFRoute(
-          name: DailyTaskWidget.routeName,
-          path: DailyTaskWidget.routePath,
-          builder: (context, params) => DailyTaskWidget(),
-        ),
-        FFRoute(
-          name: ProgramWidget.routeName,
-          path: ProgramWidget.routePath,
-          builder: (context, params) => ProgramWidget(),
-        ),
-        FFRoute(
-          name: ScratchpadWidget.routeName,
-          path: ScratchpadWidget.routePath,
-          builder: (context, params) => ScratchpadWidget(),
-        )
-      ].map((r) => r.toRoute(appStateNotifier)).toList(),
-    );
+    ),
+    FFRoute(
+      name: HomePageWidget.routeName,
+      path: HomePageWidget.routePath,
+
+      builder: (context, params) => HomePageWidget(),
+    ),
+    FFRoute(
+      name: StartWidget.routeName,
+      path: StartWidget.routePath,
+
+      builder: (context, params) => StartWidget(),
+    ),
+    FFRoute(
+      name: SignUpWidget.routeName,
+      path: SignUpWidget.routePath,
+
+      builder: (context, params) => SignUpWidget(),
+    ),
+    FFRoute(
+      name: LogInWidget.routeName,
+      path: LogInWidget.routePath,
+
+      builder: (context, params) => LogInWidget(),
+    ),
+    FFRoute(
+      name: QuestionsWidget.routeName,
+      path: QuestionsWidget.routePath,
+
+      builder: (context, params) => QuestionsWidget(),
+    ),
+    FFRoute(
+      name: Questions2Widget.routeName,
+      path: Questions2Widget.routePath,
+
+      builder: (context, params) => Questions2Widget(),
+    ),
+    FFRoute(
+      name: Questions3Widget.routeName,
+      path: Questions3Widget.routePath,
+
+      builder: (context, params) => Questions3Widget(),
+    ),
+    FFRoute(
+      name: DailyTaskWidget.routeName,
+      path: DailyTaskWidget.routePath,
+
+      builder: (context, params) => DailyTaskWidget(),
+    ),
+    FFRoute(
+      name: ProgramWidget.routeName,
+      path: ProgramWidget.routePath,
+
+      builder: (context, params) => ProgramWidget(),
+    ),
+    FFRoute(
+      name: ScratchpadWidget.routeName,
+      path: ScratchpadWidget.routePath,
+
+      builder: (context, params) => ScratchpadWidget(),
+    ),
+  ].map((r) => r.toRoute(appStateNotifier)).toList(),
+);
 
 extension NavParamExtensions on Map<String, String?> {
   Map<String, String> get withoutNulls => Map.fromEntries(
-        entries
-            .where((e) => e.value != null)
-            .map((e) => MapEntry(e.key, e.value!)),
-      );
+    entries.where((e) => e.value != null).map((e) => MapEntry(e.key, e.value!)),
+  );
 }
 
 extension NavigationExtensions on BuildContext {
@@ -172,18 +181,17 @@ class FFParameters {
       asyncParams.containsKey(param.key) && param.value is String;
   bool get hasFutures => state.allParams.entries.any(isAsyncParam);
   Future<bool> completeFutures() => Future.wait(
-        state.allParams.entries.where(isAsyncParam).map(
-          (param) async {
-            final doc = await asyncParams[param.key]!(param.value)
-                .onError((_, __) => null);
-            if (doc != null) {
-              futureParamValues[param.key] = doc;
-              return true;
-            }
-            return false;
-          },
-        ),
-      ).onError((_, __) => [false]).then((v) => v.every((e) => e));
+    state.allParams.entries.where(isAsyncParam).map((param) async {
+      final doc = await asyncParams[param.key]!(
+        param.value,
+      ).onError((_, __) => null);
+      if (doc != null) {
+        futureParamValues[param.key] = doc;
+        return true;
+      }
+      return false;
+    }),
+  ).onError((_, __) => [false]).then((v) => v.every((e) => e));
 
   dynamic getParam<T>(
     String paramName,
@@ -230,44 +238,45 @@ class FFRoute {
   final List<GoRoute> routes;
 
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
-        name: name,
-        path: path,
-        pageBuilder: (context, state) {
-          fixStatusBarOniOS16AndBelow(context);
-          final ffParams = FFParameters(state, asyncParams);
-          final page = ffParams.hasFutures
-              ? FutureBuilder(
-                  future: ffParams.completeFutures(),
-                  builder: (context, _) => builder(context, ffParams),
-                )
-              : builder(context, ffParams);
-          final child = page;
+    name: name,
+    path: path,
 
-          final transitionInfo = state.transitionInfo;
-          return transitionInfo.hasTransition
-              ? CustomTransitionPage(
-                  key: state.pageKey,
-                  child: child,
-                  transitionDuration: transitionInfo.duration,
-                  transitionsBuilder:
-                      (context, animation, secondaryAnimation, child) =>
-                          PageTransition(
-                    type: transitionInfo.transitionType,
-                    duration: transitionInfo.duration,
-                    reverseDuration: transitionInfo.duration,
-                    alignment: transitionInfo.alignment,
-                    child: child,
-                  ).buildTransitions(
-                    context,
-                    animation,
-                    secondaryAnimation,
-                    child,
-                  ),
-                )
-              : MaterialPage(key: state.pageKey, child: child);
-        },
-        routes: routes,
-      );
+    pageBuilder: (context, state) {
+      fixStatusBarOniOS16AndBelow(context);
+      final ffParams = FFParameters(state, asyncParams);
+      final page = ffParams.hasFutures
+          ? FutureBuilder(
+              future: ffParams.completeFutures(),
+              builder: (context, _) => builder(context, ffParams),
+            )
+          : builder(context, ffParams);
+      final child = page;
+
+      final transitionInfo = state.transitionInfo;
+      return transitionInfo.hasTransition
+          ? CustomTransitionPage(
+              key: state.pageKey,
+              child: child,
+              transitionDuration: transitionInfo.duration,
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) =>
+                      PageTransition(
+                        type: transitionInfo.transitionType,
+                        duration: transitionInfo.duration,
+                        reverseDuration: transitionInfo.duration,
+                        alignment: transitionInfo.alignment,
+                        child: child,
+                      ).buildTransitions(
+                        context,
+                        animation,
+                        secondaryAnimation,
+                        child,
+                      ),
+            )
+          : MaterialPage(key: state.pageKey, child: child);
+    },
+    routes: routes,
+  );
 }
 
 class TransitionInfo {
@@ -300,10 +309,8 @@ class RootPageContext {
         location != rootPageContext?.errorRoute;
   }
 
-  static Widget wrap(Widget child, {String? errorRoute}) => Provider.value(
-        value: RootPageContext(true, errorRoute),
-        child: child,
-      );
+  static Widget wrap(Widget child, {String? errorRoute}) =>
+      Provider.value(value: RootPageContext(true, errorRoute), child: child);
 }
 
 extension GoRouterLocationExtension on GoRouter {

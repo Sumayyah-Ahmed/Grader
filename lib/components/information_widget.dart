@@ -29,11 +29,7 @@ class _InformationWidgetState extends State<InformationWidget> {
 
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(
-        Duration(
-          milliseconds: 10000,
-        ),
-      );
+      await Future.delayed(Duration(milliseconds: 10000));
       Navigator.pop(context);
     });
   }
@@ -49,59 +45,74 @@ class _InformationWidgetState extends State<InformationWidget> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.max,
+
       children: [
         Container(
           width: double.infinity,
           height: 120.0,
+
           decoration: BoxDecoration(
             color: Color(0xFF249689),
+
             borderRadius: BorderRadius.circular(0.0),
           ),
+
           child: Padding(
             padding: EdgeInsets.all(15.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
               children: [
                 Flexible(
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
                     child: RichText(
                       textScaler: MediaQuery.of(context).textScaler,
+
                       text: TextSpan(
                         children: [
                           TextSpan(
                             text:
                                 'Need help customizing this template and launching it on the App Store? Reach out to us at  ',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
+                            style: FlutterFlowTheme.of(context).bodyMedium
                                 .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyMediumFamily,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
+                                  fontFamily: FlutterFlowTheme.of(
+                                    context,
+                                  ).bodyMediumFamily,
+                                  color: FlutterFlowTheme.of(
+                                    context,
+                                  ).secondaryBackground,
+
                                   letterSpacing: 0.0,
-                                  useGoogleFonts: !FlutterFlowTheme.of(context)
-                                      .bodyMediumIsCustom,
+
+                                  useGoogleFonts: !FlutterFlowTheme.of(
+                                    context,
+                                  ).bodyMediumIsCustom,
                                 ),
                           ),
                           TextSpan(
                             text: 'SynergyLabs.co',
                             style: TextStyle(
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                              color: FlutterFlowTheme.of(
+                                context,
+                              ).primaryBackground,
                               fontWeight: FontWeight.w600,
                               fontSize: 14.0,
                             ),
-                          )
+                          ),
                         ],
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
-                              letterSpacing: 0.0,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
-                            ),
+                          fontFamily: FlutterFlowTheme.of(
+                            context,
+                          ).bodyMediumFamily,
+
+                          letterSpacing: 0.0,
+
+                          useGoogleFonts: !FlutterFlowTheme.of(
+                            context,
+                          ).bodyMediumIsCustom,
+                        ),
                       ),
                     ),
                   ),
@@ -111,21 +122,31 @@ class _InformationWidgetState extends State<InformationWidget> {
                     await launchURL('http://synergylabs.co/');
                   },
                   text: 'Details',
+
                   options: FFButtonOptions(
                     height: 40.0,
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+
+                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                    ),
+
                     color: Color(0x002F3A4B),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).titleSmallFamily,
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          letterSpacing: 0.0,
-                          useGoogleFonts:
-                              !FlutterFlowTheme.of(context).titleSmallIsCustom,
-                        ),
+                      fontFamily: FlutterFlowTheme.of(context).titleSmallFamily,
+                      color: FlutterFlowTheme.of(context).primaryText,
+
+                      letterSpacing: 0.0,
+
+                      useGoogleFonts: !FlutterFlowTheme.of(
+                        context,
+                      ).titleSmallIsCustom,
+                    ),
                     elevation: 0.0,
+
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),

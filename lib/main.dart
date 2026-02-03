@@ -16,10 +16,7 @@ void main() async {
   final appState = FFAppState(); // Initialize FFAppState
   await appState.initializePersistedState();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
-    child: MyApp(),
-  ));
+  runApp(ChangeNotifierProvider(create: (context) => appState, child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -45,10 +42,12 @@ class _MyAppState extends State<MyApp> {
     return matchList.uri.toString();
   }
 
-  List<String> getRouteStack() =>
-      _router.routerDelegate.currentConfiguration.matches
-          .map((e) => getRoute(e))
-          .toList();
+  List<String> getRouteStack() => _router
+      .routerDelegate
+      .currentConfiguration
+      .matches
+      .map((e) => getRoute(e))
+      .toList();
   bool displaySplashImage = true;
 
   @override
@@ -58,29 +57,31 @@ class _MyAppState extends State<MyApp> {
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
 
-    Future.delayed(Duration(milliseconds: 1),
-        () => safeSetState(() => _appStateNotifier.stopShowingSplashImage()));
+    Future.delayed(
+      Duration(milliseconds: 1),
+      () => safeSetState(() => _appStateNotifier.stopShowingSplashImage()),
+    );
   }
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
-        _themeMode = mode;
-      });
+    _themeMode = mode;
+  });
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Grading Book ',
+
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+
       supportedLocales: const [Locale('en', '')],
-      theme: ThemeData(
-        brightness: Brightness.light,
-        useMaterial3: false,
-      ),
+      theme: ThemeData(brightness: Brightness.light, useMaterial3: false),
+
       themeMode: _themeMode,
       routerConfig: _router,
     );

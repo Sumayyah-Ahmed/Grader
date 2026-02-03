@@ -38,21 +38,24 @@ class _RightAnswerWidgetState extends State<RightAnswerWidget> {
     return Column(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.end,
+
       children: [
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 86.0),
           child: Container(
             width: double.infinity,
             height: 200.0,
+
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: Image.asset(
-                  'assets/images/Frame_10138.png',
-                ).image,
+
+                image: Image.asset('assets/images/Frame_10138.png').image,
               ),
+
               borderRadius: BorderRadius.circular(20.0),
             ),
+
             child: Align(
               alignment: AlignmentDirectional(0.0, 1.0),
               child: Padding(
@@ -65,36 +68,43 @@ class _RightAnswerWidgetState extends State<RightAnswerWidget> {
                   onTap: () async {
                     Navigator.pop(context);
                   },
+
                   child: Container(
                     width: 215.0,
                     height: 41.0,
+
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primary,
+
                       boxShadow: [
                         BoxShadow(
                           blurRadius: 0.0,
                           color: Color(0xFF77630D),
-                          offset: Offset(
-                            2.0,
-                            2.0,
-                          ),
+                          offset: Offset(2.0, 2.0),
                           spreadRadius: 0.0,
-                        )
+                        ),
                       ],
+
                       borderRadius: BorderRadius.circular(8.0),
                     ),
+
                     child: Align(
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Next question',
+
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyMediumFamily,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.w600,
-                              useGoogleFonts: !FlutterFlowTheme.of(context)
-                                  .bodyMediumIsCustom,
-                            ),
+                          fontFamily: FlutterFlowTheme.of(
+                            context,
+                          ).bodyMediumFamily,
+
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.w600,
+
+                          useGoogleFonts: !FlutterFlowTheme.of(
+                            context,
+                          ).bodyMediumIsCustom,
+                        ),
                       ),
                     ),
                   ),

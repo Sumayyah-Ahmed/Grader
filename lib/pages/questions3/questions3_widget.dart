@@ -33,10 +33,12 @@ class _Questions3WidgetState extends State<Questions3Widget> {
 
       context.goNamed(
         HomePageWidget.routeName,
+
         extra: <String, dynamic>{
-          kTransitionInfoKey: TransitionInfo(
+          '__transition_info__': TransitionInfo(
             hasTransition: true,
             transitionType: PageTransitionType.rightToLeft,
+
             duration: Duration(milliseconds: 400),
           ),
         },
@@ -60,31 +62,41 @@ class _Questions3WidgetState extends State<Questions3Widget> {
       },
       child: Scaffold(
         key: scaffoldKey,
+
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+
         body: Container(
           width: double.infinity,
           height: double.infinity,
+
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: Image.asset(
-                'assets/images/start.png',
-              ).image,
+
+              image: Image.asset('assets/images/start.png').image,
             ),
           ),
+
           child: SafeArea(
             child: Container(
               width: double.infinity,
               height: double.infinity,
+
               decoration: BoxDecoration(),
+
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                 children: [
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 90.0, 0.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(
+                      0.0,
+                      90.0,
+                      0.0,
+                      0.0,
+                    ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(0.0),
                       child: Image.asset(
@@ -96,46 +108,64 @@ class _Questions3WidgetState extends State<Questions3Widget> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(
+                      0.0,
+                      0.0,
+                      0.0,
+                      40.0,
+                    ),
                     child: Stack(
                       children: [
                         Align(
                           alignment: AlignmentDirectional(1.0, 0.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 26.0, 0.0),
+                              0.0,
+                              0.0,
+                              26.0,
+                              0.0,
+                            ),
                             child: Container(
                               width: 202.0,
                               height: 100.0,
+
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.fill,
+
                                   image: Image.asset(
                                     'assets/images/Rectangle_2981.png',
                                   ).image,
                                 ),
                               ),
+
                               child: Align(
                                 alignment: AlignmentDirectional(0.0, -1.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      1.0, 14.0, 6.0, 0.0),
+                                    1.0,
+                                    14.0,
+                                    6.0,
+                                    0.0,
+                                  ),
                                   child: Text(
                                     'Сreating a personal program for you...',
                                     textAlign: TextAlign.center,
+
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
+                                          fontFamily: FlutterFlowTheme.of(
+                                            context,
+                                          ).bodyMediumFamily,
+
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
+
+                                          useGoogleFonts: !FlutterFlowTheme.of(
+                                            context,
+                                          ).bodyMediumIsCustom,
                                         ),
                                   ),
                                 ),
@@ -147,11 +177,16 @@ class _Questions3WidgetState extends State<Questions3Widget> {
                           alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 30.0, 0.0, 0.0),
+                              0.0,
+                              30.0,
+                              0.0,
+                              0.0,
+                            ),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: Image.asset(
                                 'assets/images/image_9082.png',
+
                                 fit: BoxFit.cover,
                               ),
                             ),

@@ -36,6 +36,7 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
     animationsMap.addAll({
       'columnOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
+
         effectsBuilder: () => [
           MoveEffect(
             curve: Curves.easeInOut,
@@ -65,34 +66,44 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
       },
       child: Scaffold(
         key: scaffoldKey,
+
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+
         body: Stack(
           children: [
             Material(
               color: Colors.transparent,
               elevation: 0.0,
+
               child: Container(
                 width: double.infinity,
                 height: double.infinity,
+
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: Image.asset(
-                      'assets/images/Scratchpad.png',
-                    ).image,
+
+                    image: Image.asset('assets/images/Scratchpad.png').image,
                   ),
                 ),
+
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 65.0),
                   child: SafeArea(
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
+
                       decoration: BoxDecoration(),
+
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 16.0, 16.0, 0.0),
+                          16.0,
+                          16.0,
+                          16.0,
+                          0.0,
+                        ),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -102,6 +113,7 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                             await showModalBottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
+
                               enableDrag: false,
                               useSafeArea: true,
                               context: context,
@@ -123,6 +135,7 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                               },
                             ).then((value) => safeSetState(() {}));
                           },
+
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,39 +143,53 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                             children: [
                               Text(
                                 'Schratchpad',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
+
+                                style: FlutterFlowTheme.of(context).bodyMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                      fontFamily: FlutterFlowTheme.of(
+                                        context,
+                                      ).bodyMediumFamily,
+
                                       fontSize: 32.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .bodyMediumIsCustom,
+
+                                      useGoogleFonts: !FlutterFlowTheme.of(
+                                        context,
+                                      ).bodyMediumIsCustom,
                                     ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 30.0),
+                                  0.0,
+                                  0.0,
+                                  0.0,
+                                  30.0,
+                                ),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
+
                                   children: [
                                     Expanded(
                                       child: Container(
                                         width: 100.0,
                                         height: 41.0,
+
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                          borderRadius:
-                                              BorderRadius.circular(20.0),
+                                          color: FlutterFlowTheme.of(
+                                            context,
+                                          ).primaryBackground,
+
+                                          borderRadius: BorderRadius.circular(
+                                            20.0,
+                                          ),
                                         ),
+
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
+
                                           children: [
                                             ClipRRect(
                                               borderRadius:
@@ -176,23 +203,26 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                                             ),
                                             Text(
                                               'Change question',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
+
+                                              style:
+                                                  FlutterFlowTheme.of(
+                                                    context,
+                                                  ).bodyMedium.override(
                                                     fontFamily:
                                                         FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
+                                                          context,
+                                                        ).bodyMediumFamily,
                                                     color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondary,
+                                                      context,
+                                                    ).secondary,
+
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
+
                                                     useGoogleFonts:
                                                         !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
+                                                          context,
+                                                        ).bodyMediumIsCustom,
                                                   ),
                                             ),
                                           ].divide(SizedBox(width: 6.0)),
@@ -203,16 +233,22 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                                       child: Container(
                                         width: 100.0,
                                         height: 41.0,
+
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                          borderRadius:
-                                              BorderRadius.circular(20.0),
+                                          color: FlutterFlowTheme.of(
+                                            context,
+                                          ).primaryBackground,
+
+                                          borderRadius: BorderRadius.circular(
+                                            20.0,
+                                          ),
                                         ),
+
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
+
                                           children: [
                                             ClipRRect(
                                               borderRadius:
@@ -226,23 +262,26 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                                             ),
                                             Text(
                                               'Clear schratchpad',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
+
+                                              style:
+                                                  FlutterFlowTheme.of(
+                                                    context,
+                                                  ).bodyMedium.override(
                                                     fontFamily:
                                                         FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily,
+                                                          context,
+                                                        ).bodyMediumFamily,
                                                     color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondary,
+                                                      context,
+                                                    ).secondary,
+
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
+
                                                     useGoogleFonts:
                                                         !FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumIsCustom,
+                                                          context,
+                                                        ).bodyMediumIsCustom,
                                                   ),
                                             ),
                                           ].divide(SizedBox(width: 6.0)),
@@ -267,8 +306,10 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                 child: Container(
                   width: double.infinity,
                   height: 70.0,
+
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryBackground,
+
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(0.0),
                       bottomRight: Radius.circular(0.0),
@@ -276,12 +317,18 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                       topRight: Radius.circular(20.0),
                     ),
                   ),
+
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 8.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(
+                      16.0,
+                      12.0,
+                      16.0,
+                      8.0,
+                    ),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                       children: [
                         InkWell(
                           splashColor: Colors.transparent,
@@ -291,25 +338,35 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                           onTap: () async {
                             context.pushNamed(
                               HomePageWidget.routeName,
+
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
+                                '__transition_info__': TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
+
                                   duration: Duration(milliseconds: 1),
                                 ),
                               },
                             );
                           },
+
                           child: Container(
                             width: 72.0,
                             height: 50.0,
+
                             decoration: BoxDecoration(),
+
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 4.0),
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    4.0,
+                                  ),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.asset(
@@ -322,17 +379,20 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                                 ),
                                 Text(
                                   'Home',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
+
+                                  style: FlutterFlowTheme.of(context).bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily: FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumFamily,
                                         color: Color(0xFFA9ABAD),
+
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
-                                                .bodyMediumIsCustom,
+
+                                        useGoogleFonts: !FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumIsCustom,
                                       ),
                                 ),
                               ],
@@ -347,25 +407,35 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                           onTap: () async {
                             context.pushNamed(
                               ProgramWidget.routeName,
+
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
+                                '__transition_info__': TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
+
                                   duration: Duration(milliseconds: 1),
                                 ),
                               },
                             );
                           },
+
                           child: Container(
                             width: 72.0,
                             height: 50.0,
+
                             decoration: BoxDecoration(),
+
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 4.0),
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    4.0,
+                                  ),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.asset(
@@ -378,17 +448,20 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                                 ),
                                 Text(
                                   'Program',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
+
+                                  style: FlutterFlowTheme.of(context).bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily: FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumFamily,
                                         color: Color(0xFFA9ABAD),
+
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
-                                                .bodyMediumIsCustom,
+
+                                        useGoogleFonts: !FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumIsCustom,
                                       ),
                                 ),
                               ],
@@ -398,53 +471,74 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                         Container(
                           width: 72.0,
                           height: 50.0,
+
                           decoration: BoxDecoration(),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 4.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  child: Image.asset(
-                                    'assets/images/bookmark2.png',
-                                    width: 24.0,
-                                    height: 24.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                'Scratchpad',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondary,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w500,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .bodyMediumIsCustom,
+
+                          child:
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0,
+                                      0.0,
+                                      0.0,
+                                      4.0,
                                     ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(0.0),
+                                      child: Image.asset(
+                                        'assets/images/bookmark2.png',
+                                        width: 24.0,
+                                        height: 24.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    'Scratchpad',
+
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: FlutterFlowTheme.of(
+                                            context,
+                                          ).bodyMediumFamily,
+                                          color: FlutterFlowTheme.of(
+                                            context,
+                                          ).secondary,
+
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w500,
+
+                                          useGoogleFonts: !FlutterFlowTheme.of(
+                                            context,
+                                          ).bodyMediumIsCustom,
+                                        ),
+                                  ),
+                                ],
+                              ).animateOnPageLoad(
+                                animationsMap['columnOnPageLoadAnimation']!,
                               ),
-                            ],
-                          ).animateOnPageLoad(
-                              animationsMap['columnOnPageLoadAnimation']!),
                         ),
                         Container(
                           width: 72.0,
                           height: 50.0,
+
                           decoration: BoxDecoration(),
+
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
+
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 4.0),
+                                  0.0,
+                                  0.0,
+                                  0.0,
+                                  4.0,
+                                ),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
@@ -457,17 +551,20 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                               ),
                               Text(
                                 'Profile',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
+
+                                style: FlutterFlowTheme.of(context).bodyMedium
                                     .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
+                                      fontFamily: FlutterFlowTheme.of(
+                                        context,
+                                      ).bodyMediumFamily,
                                       color: Color(0xFFA9ABAD),
+
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .bodyMediumIsCustom,
+
+                                      useGoogleFonts: !FlutterFlowTheme.of(
+                                        context,
+                                      ).bodyMediumIsCustom,
                                     ),
                               ),
                             ],
@@ -485,11 +582,14 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                 padding: EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
+
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
                       height: 106.0,
+
                       decoration: BoxDecoration(),
+
                       child: Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: FaIcon(
@@ -501,9 +601,11 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.min,
+
                       children: [
                         Row(
                           mainAxisSize: MainAxisSize.min,
+
                           children: [
                             FaIcon(
                               FontAwesomeIcons.plus,
@@ -512,39 +614,44 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                             ),
                             Column(
                               mainAxisSize: MainAxisSize.min,
+
                               children: [
                                 Text(
                                   '25',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
+
+                                  style: FlutterFlowTheme.of(context).bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily: FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumFamily,
                                         color: Color(0xFF600584),
                                         fontSize: 81.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
+
                                         lineHeight: 1.0,
-                                        useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
-                                                .bodyMediumIsCustom,
+                                        useGoogleFonts: !FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumIsCustom,
                                       ),
                                 ),
                                 Text(
                                   '30',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
+
+                                  style: FlutterFlowTheme.of(context).bodyMedium
                                       .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                        fontFamily: FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumFamily,
                                         color: Color(0xFF600584),
                                         fontSize: 81.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
+
                                         lineHeight: 1.0,
-                                        useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
-                                                .bodyMediumIsCustom,
+                                        useGoogleFonts: !FlutterFlowTheme.of(
+                                          context,
+                                        ).bodyMediumIsCustom,
                                       ),
                                 ),
                               ],
@@ -554,25 +661,30 @@ class _ScratchpadWidgetState extends State<ScratchpadWidget>
                         Container(
                           width: 152.0,
                           height: 12.0,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF600584),
-                          ),
+
+                          decoration: BoxDecoration(color: Color(0xFF600584)),
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 0.0),
+                            0.0,
+                            10.0,
+                            0.0,
+                            0.0,
+                          ),
                           child: Container(
                             width: 160.0,
                             height: 97.0,
+
                             decoration: BoxDecoration(),
+
                             child: ClipRect(
                               child: Signature(
                                 controller: _model.signatureController ??=
                                     SignatureController(
-                                  penStrokeWidth: 5.0,
-                                  penColor: Color(0xFF3C5BFA),
-                                  exportBackgroundColor: Color(0x00FFFFFF),
-                                ),
+                                      penStrokeWidth: 5.0,
+                                      penColor: Color(0xFF3C5BFA),
+                                      exportBackgroundColor: Color(0x00FFFFFF),
+                                    ),
                                 backgroundColor: Color(0x00FFFFFF),
                                 height: 120.0,
                               ),

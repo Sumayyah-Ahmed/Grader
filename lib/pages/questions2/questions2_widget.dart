@@ -42,73 +42,99 @@ class _Questions2WidgetState extends State<Questions2Widget> {
       },
       child: Scaffold(
         key: scaffoldKey,
+
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+
         body: Container(
           width: double.infinity,
           height: double.infinity,
+
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: Image.asset(
-                'assets/images/start.png',
-              ).image,
+
+              image: Image.asset('assets/images/start.png').image,
             ),
           ),
+
           child: SafeArea(
             child: Container(
               width: double.infinity,
               height: double.infinity,
+
               decoration: BoxDecoration(),
+
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
+
                   children: [
                     Container(
                       height: MediaQuery.sizeOf(context).height * 0.083,
+
                       decoration: BoxDecoration(),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                        0.0,
+                        0.0,
+                        0.0,
+                        40.0,
+                      ),
                       child: Stack(
                         children: [
                           Align(
                             alignment: AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  25.0, 0.0, 0.0, 0.0),
+                                25.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                              ),
                               child: Container(
                                 width: 224.0,
                                 height: 102.0,
+
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
+
                                     image: Image.asset(
                                       'assets/images/Rectangle_2982.png',
                                     ).image,
                                   ),
                                 ),
+
                                 child: Align(
                                   alignment: AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        1.0, 14.0, 6.0, 0.0),
+                                      1.0,
+                                      14.0,
+                                      6.0,
+                                      0.0,
+                                    ),
                                     child: Text(
                                       'Nice to meet you Peter! How old are you?',
                                       textAlign: TextAlign.center,
+
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
+                                            fontFamily: FlutterFlowTheme.of(
+                                              context,
+                                            ).bodyMediumFamily,
+
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
+
                                             useGoogleFonts:
-                                                !FlutterFlowTheme.of(context)
-                                                    .bodyMediumIsCustom,
+                                                !FlutterFlowTheme.of(
+                                                  context,
+                                                ).bodyMediumIsCustom,
                                           ),
                                     ),
                                   ),
@@ -120,11 +146,16 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                             alignment: AlignmentDirectional(1.0, 0.0),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 65.0, 0.0, 0.0),
+                                0.0,
+                                65.0,
+                                0.0,
+                                0.0,
+                              ),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
                                   'assets/images/image_9081.png',
+
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -134,8 +165,12 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                        35.0,
+                        0.0,
+                        35.0,
+                        30.0,
+                      ),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -144,55 +179,64 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                         onTap: () async {
                           context.pushNamed(
                             Questions3Widget.routeName,
+
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              '__transition_info__': TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
+
                                 duration: Duration(milliseconds: 400),
                               ),
                             },
                           );
                         },
+
                         child: Container(
                           width: double.infinity,
                           height: 68.0,
+
                           decoration: BoxDecoration(
                             color: Color(0xFF3C9BF2),
+
                             boxShadow: [
                               BoxShadow(
                                 blurRadius: 0.0,
-                                color:
-                                    FlutterFlowTheme.of(context).buttonShadow,
-                                offset: Offset(
-                                  4.0,
-                                  4.0,
-                                ),
+                                color: FlutterFlowTheme.of(
+                                  context,
+                                ).buttonShadow,
+                                offset: Offset(4.0, 4.0),
                                 spreadRadius: 0.0,
-                              )
+                              ),
                             ],
+
                             borderRadius: BorderRadius.circular(8.0),
+
                             border: Border.all(
                               color: FlutterFlowTheme.of(context).buttonShadow,
                               width: 4.0,
                             ),
                           ),
+
                           child: Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '4-6 years old',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
+
+                              style: FlutterFlowTheme.of(context).bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    fontFamily: FlutterFlowTheme.of(
+                                      context,
+                                    ).bodyMediumFamily,
+                                    color: FlutterFlowTheme.of(
+                                      context,
+                                    ).primaryBackground,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyMediumIsCustom,
+
+                                    useGoogleFonts: !FlutterFlowTheme.of(
+                                      context,
+                                    ).bodyMediumIsCustom,
                                   ),
                             ),
                           ),
@@ -200,8 +244,12 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                        35.0,
+                        0.0,
+                        35.0,
+                        30.0,
+                      ),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -210,55 +258,64 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                         onTap: () async {
                           context.pushNamed(
                             Questions3Widget.routeName,
+
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              '__transition_info__': TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
+
                                 duration: Duration(milliseconds: 400),
                               ),
                             },
                           );
                         },
+
                         child: Container(
                           width: double.infinity,
                           height: 68.0,
+
                           decoration: BoxDecoration(
                             color: Color(0xFF3C9BF2),
+
                             boxShadow: [
                               BoxShadow(
                                 blurRadius: 0.0,
-                                color:
-                                    FlutterFlowTheme.of(context).buttonShadow,
-                                offset: Offset(
-                                  4.0,
-                                  4.0,
-                                ),
+                                color: FlutterFlowTheme.of(
+                                  context,
+                                ).buttonShadow,
+                                offset: Offset(4.0, 4.0),
                                 spreadRadius: 0.0,
-                              )
+                              ),
                             ],
+
                             borderRadius: BorderRadius.circular(8.0),
+
                             border: Border.all(
                               color: FlutterFlowTheme.of(context).buttonShadow,
                               width: 4.0,
                             ),
                           ),
+
                           child: Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '7-9 years old',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
+
+                              style: FlutterFlowTheme.of(context).bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    fontFamily: FlutterFlowTheme.of(
+                                      context,
+                                    ).bodyMediumFamily,
+                                    color: FlutterFlowTheme.of(
+                                      context,
+                                    ).primaryBackground,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyMediumIsCustom,
+
+                                    useGoogleFonts: !FlutterFlowTheme.of(
+                                      context,
+                                    ).bodyMediumIsCustom,
                                   ),
                             ),
                           ),
@@ -266,8 +323,12 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 35.0, 30.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                        35.0,
+                        0.0,
+                        35.0,
+                        30.0,
+                      ),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -276,55 +337,64 @@ class _Questions2WidgetState extends State<Questions2Widget> {
                         onTap: () async {
                           context.pushNamed(
                             Questions3Widget.routeName,
+
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              '__transition_info__': TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
+
                                 duration: Duration(milliseconds: 400),
                               ),
                             },
                           );
                         },
+
                         child: Container(
                           width: double.infinity,
                           height: 68.0,
+
                           decoration: BoxDecoration(
                             color: Color(0xFF3C9BF2),
+
                             boxShadow: [
                               BoxShadow(
                                 blurRadius: 0.0,
-                                color:
-                                    FlutterFlowTheme.of(context).buttonShadow,
-                                offset: Offset(
-                                  4.0,
-                                  4.0,
-                                ),
+                                color: FlutterFlowTheme.of(
+                                  context,
+                                ).buttonShadow,
+                                offset: Offset(4.0, 4.0),
                                 spreadRadius: 0.0,
-                              )
+                              ),
                             ],
+
                             borderRadius: BorderRadius.circular(8.0),
+
                             border: Border.all(
                               color: FlutterFlowTheme.of(context).buttonShadow,
                               width: 4.0,
                             ),
                           ),
+
                           child: Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '7-9 years old',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
+
+                              style: FlutterFlowTheme.of(context).bodyMedium
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    fontFamily: FlutterFlowTheme.of(
+                                      context,
+                                    ).bodyMediumFamily,
+                                    color: FlutterFlowTheme.of(
+                                      context,
+                                    ).primaryBackground,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyMediumIsCustom,
+
+                                    useGoogleFonts: !FlutterFlowTheme.of(
+                                      context,
+                                    ).bodyMediumIsCustom,
                                   ),
                             ),
                           ),

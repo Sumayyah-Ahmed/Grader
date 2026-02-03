@@ -3,11 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-enum DeviceSize {
-  mobile,
-  tablet,
-  desktop,
-}
+enum DeviceSize { mobile, tablet, desktop }
 
 abstract class FlutterFlowTheme {
   static DeviceSize deviceSize = DeviceSize.mobile;
@@ -130,10 +126,10 @@ abstract class FlutterFlowTheme {
   TextStyle get bodySmall => typography.bodySmall;
 
   Typography get typography => {
-        DeviceSize.mobile: MobileTypography(this),
-        DeviceSize.tablet: TabletTypography(this),
-        DeviceSize.desktop: DesktopTypography(this),
-      }[deviceSize]!;
+    DeviceSize.mobile: MobileTypography(this),
+    DeviceSize.tablet: TabletTypography(this),
+    DeviceSize.desktop: DesktopTypography(this),
+  }[deviceSize]!;
 }
 
 DeviceSize getDeviceSize(BuildContext context) {
@@ -242,123 +238,123 @@ class MobileTypography extends Typography {
   String get displayLargeFamily => 'Sukhumvit Set';
   bool get displayLargeIsCustom => true;
   TextStyle get displayLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 64.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 64.0,
+  );
   String get displayMediumFamily => 'Sukhumvit Set';
   bool get displayMediumIsCustom => true;
   TextStyle get displayMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 44.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 44.0,
+  );
   String get displaySmallFamily => 'Sukhumvit Set';
   bool get displaySmallIsCustom => true;
   TextStyle get displaySmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 36.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 36.0,
+  );
   String get headlineLargeFamily => 'Sukhumvit Set';
   bool get headlineLargeIsCustom => true;
   TextStyle get headlineLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 32.0,
+  );
   String get headlineMediumFamily => 'Sukhumvit Set';
   bool get headlineMediumIsCustom => true;
   TextStyle get headlineMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 28.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 28.0,
+  );
   String get headlineSmallFamily => 'Sukhumvit Set';
   bool get headlineSmallIsCustom => true;
   TextStyle get headlineSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 24.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 24.0,
+  );
   String get titleLargeFamily => 'Sukhumvit Set';
   bool get titleLargeIsCustom => true;
   TextStyle get titleLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 20.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 20.0,
+  );
   String get titleMediumFamily => 'Sukhumvit Set';
   bool get titleMediumIsCustom => true;
   TextStyle get titleMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 18.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 18.0,
+  );
   String get titleSmallFamily => 'Sukhumvit Set';
   bool get titleSmallIsCustom => true;
   TextStyle get titleSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 16.0,
+  );
   String get labelLargeFamily => 'Sukhumvit Set';
   bool get labelLargeIsCustom => true;
   TextStyle get labelLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 16.0,
+  );
   String get labelMediumFamily => 'Sukhumvit Set';
   bool get labelMediumIsCustom => true;
   TextStyle get labelMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+  );
   String get labelSmallFamily => 'Sukhumvit Set';
   bool get labelSmallIsCustom => true;
   TextStyle get labelSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+  );
   String get bodyLargeFamily => 'Sukhumvit Set';
   bool get bodyLargeIsCustom => true;
   TextStyle get bodyLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 16.0,
+  );
   String get bodyMediumFamily => 'Sukhumvit Set';
   bool get bodyMediumIsCustom => true;
   TextStyle get bodyMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+  );
   String get bodySmallFamily => 'Sukhumvit Set';
   bool get bodySmallIsCustom => true;
   TextStyle get bodySmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+  );
 }
 
 class TabletTypography extends Typography {
@@ -369,123 +365,123 @@ class TabletTypography extends Typography {
   String get displayLargeFamily => 'Sukhumvit Set';
   bool get displayLargeIsCustom => true;
   TextStyle get displayLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 64.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 64.0,
+  );
   String get displayMediumFamily => 'Sukhumvit Set';
   bool get displayMediumIsCustom => true;
   TextStyle get displayMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 44.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 44.0,
+  );
   String get displaySmallFamily => 'Sukhumvit Set';
   bool get displaySmallIsCustom => true;
   TextStyle get displaySmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 36.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 36.0,
+  );
   String get headlineLargeFamily => 'Sukhumvit Set';
   bool get headlineLargeIsCustom => true;
   TextStyle get headlineLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 32.0,
+  );
   String get headlineMediumFamily => 'Sukhumvit Set';
   bool get headlineMediumIsCustom => true;
   TextStyle get headlineMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 28.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 28.0,
+  );
   String get headlineSmallFamily => 'Sukhumvit Set';
   bool get headlineSmallIsCustom => true;
   TextStyle get headlineSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 24.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 24.0,
+  );
   String get titleLargeFamily => 'Sukhumvit Set';
   bool get titleLargeIsCustom => true;
   TextStyle get titleLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 20.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 20.0,
+  );
   String get titleMediumFamily => 'Sukhumvit Set';
   bool get titleMediumIsCustom => true;
   TextStyle get titleMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 18.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 18.0,
+  );
   String get titleSmallFamily => 'Sukhumvit Set';
   bool get titleSmallIsCustom => true;
   TextStyle get titleSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 16.0,
+  );
   String get labelLargeFamily => 'Sukhumvit Set';
   bool get labelLargeIsCustom => true;
   TextStyle get labelLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 16.0,
+  );
   String get labelMediumFamily => 'Sukhumvit Set';
   bool get labelMediumIsCustom => true;
   TextStyle get labelMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+  );
   String get labelSmallFamily => 'Sukhumvit Set';
   bool get labelSmallIsCustom => true;
   TextStyle get labelSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+  );
   String get bodyLargeFamily => 'Sukhumvit Set';
   bool get bodyLargeIsCustom => true;
   TextStyle get bodyLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 16.0,
+  );
   String get bodyMediumFamily => 'Sukhumvit Set';
   bool get bodyMediumIsCustom => true;
   TextStyle get bodyMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+  );
   String get bodySmallFamily => 'Sukhumvit Set';
   bool get bodySmallIsCustom => true;
   TextStyle get bodySmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+  );
 }
 
 class DesktopTypography extends Typography {
@@ -496,123 +492,123 @@ class DesktopTypography extends Typography {
   String get displayLargeFamily => 'Sukhumvit Set';
   bool get displayLargeIsCustom => true;
   TextStyle get displayLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 64.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 64.0,
+  );
   String get displayMediumFamily => 'Sukhumvit Set';
   bool get displayMediumIsCustom => true;
   TextStyle get displayMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 44.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 44.0,
+  );
   String get displaySmallFamily => 'Sukhumvit Set';
   bool get displaySmallIsCustom => true;
   TextStyle get displaySmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 36.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 36.0,
+  );
   String get headlineLargeFamily => 'Sukhumvit Set';
   bool get headlineLargeIsCustom => true;
   TextStyle get headlineLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 32.0,
+  );
   String get headlineMediumFamily => 'Sukhumvit Set';
   bool get headlineMediumIsCustom => true;
   TextStyle get headlineMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 28.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 28.0,
+  );
   String get headlineSmallFamily => 'Sukhumvit Set';
   bool get headlineSmallIsCustom => true;
   TextStyle get headlineSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 24.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 24.0,
+  );
   String get titleLargeFamily => 'Sukhumvit Set';
   bool get titleLargeIsCustom => true;
   TextStyle get titleLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 20.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 20.0,
+  );
   String get titleMediumFamily => 'Sukhumvit Set';
   bool get titleMediumIsCustom => true;
   TextStyle get titleMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 18.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 18.0,
+  );
   String get titleSmallFamily => 'Sukhumvit Set';
   bool get titleSmallIsCustom => true;
   TextStyle get titleSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.w600,
+    fontSize: 16.0,
+  );
   String get labelLargeFamily => 'Sukhumvit Set';
   bool get labelLargeIsCustom => true;
   TextStyle get labelLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 16.0,
+  );
   String get labelMediumFamily => 'Sukhumvit Set';
   bool get labelMediumIsCustom => true;
   TextStyle get labelMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+  );
   String get labelSmallFamily => 'Sukhumvit Set';
   bool get labelSmallIsCustom => true;
   TextStyle get labelSmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.secondaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+  );
   String get bodyLargeFamily => 'Sukhumvit Set';
   bool get bodyLargeIsCustom => true;
   TextStyle get bodyLarge => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 16.0,
+  );
   String get bodyMediumFamily => 'Sukhumvit Set';
   bool get bodyMediumIsCustom => true;
   TextStyle get bodyMedium => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+  );
   String get bodySmallFamily => 'Sukhumvit Set';
   bool get bodySmallIsCustom => true;
   TextStyle get bodySmall => TextStyle(
-        fontFamily: 'Sukhumvit Set',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 12.0,
-      );
+    fontFamily: 'Sukhumvit Set',
+    color: theme.primaryText,
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+  );
 }
 
 extension TextStyleHelper on TextStyle {
@@ -631,9 +627,11 @@ extension TextStyleHelper on TextStyle {
     String? package,
   }) {
     if (useGoogleFonts && fontFamily != null) {
-      font = GoogleFonts.getFont(fontFamily,
-          fontWeight: fontWeight ?? this.fontWeight,
-          fontStyle: fontStyle ?? this.fontStyle);
+      font = GoogleFonts.getFont(
+        fontFamily,
+        fontWeight: fontWeight ?? this.fontWeight,
+        fontStyle: fontStyle ?? this.fontStyle,
+      );
     }
 
     return font != null
